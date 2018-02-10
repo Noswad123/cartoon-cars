@@ -11,11 +11,15 @@ let mainStyle={
 class App extends Component {
   constructor(){
     super();
-    this.state={serverData:{}};
+    this.state={
+    serverData:{},
+    filterString:''
+  };
  
   }  
   componentWillMount(){
     this.setState({serverData:carData});
+    
   }
   render() {
         return (
@@ -25,8 +29,16 @@ class App extends Component {
             <h1> Showroom</h1>
             <Showcase />
             <Description/>
-            <SearchBar/>
-            {this.state.serverData.map(car=>
+            <SearchBar onTextChange={text=>this.setState({filterString:text})}/>
+            {this.state.serverData.filter(car=>
+            {
+              console.log(car.name);
+              console.log(car.name.includes(this.state.filterString.toLowerCase()));
+              return car.name.toLowerCase().includes(this.state.filterString.toLowerCase())
+            }
+              
+
+            ).map(car=>
               <Gallery  img={car.img}/> 
             )}
             
@@ -79,7 +91,7 @@ class Description extends Component{
 class SearchBar extends Component{
   render(){
       return (
-          <div><input type="text"/></div>
+          <div><input type="text" onKeyUp={event=> this.props.onTextChange(event.target.value)}/></div>
       );
   }
 }
