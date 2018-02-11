@@ -1,8 +1,8 @@
 export var carData=
    [{
-    name:"Example Car",
-    img: "dreamcar.jpg",
-    description:"Explore all of your favorite fantasy cars"
+    name:"Jetsons",
+    img: "jetsons.jpg",
+    description:"No freeway needed"
   },
   {
     name:"Bat Mobile",
@@ -10,12 +10,22 @@ export var carData=
     description:"The whip of the dark knight hiself"
   },
   {
-    name:"Kit",
+    name:"Lightning McQueen",
+    img: "lightning.jpg",
+    description:"Faster than any transformer"
+  },
+  {
+    name:"Turtle Van",
+    img: "turtle.jpg",
+    description:"Turtle Power"
+  },
+  {
+    name:"Kitt",
     img: "kitt.jpg",
     description:"Way before siri was even conceived"
   },
   {
-    name:"Mach 4",
+    name:"Mach 5",
     img: "mach5_2.jpg",
     description:"Go Speed racer... GO!"
   },
@@ -26,7 +36,7 @@ export var carData=
   },
   {
     name:"Magic School Bus",
-    img: "magicSchooBus.jpg",
+    img: "magicSchoolBus.jpg",
     description:"Tour space, deep sea or even the human body"
   },
   {
@@ -36,7 +46,7 @@ export var carData=
   },
   {
     name:"Flintstones",
-    img: "flinstones.jpg",
+    img: "flintstones.jpg",
     description:"Workout as you drive"
   },
   {
